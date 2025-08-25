@@ -1,0 +1,53 @@
+.nav_bar_link_block {
+
+    color: Chocolate ;
+
+    font-size: 30px ;
+    font-weight: bold ;
+
+    padding: 20px ;
+    padding-left: 40px ;
+
+}
+
+.active_nav_bar_link {
+
+    background-color: HSLA( 25, 100%, 17%, 1.0 ) ;
+
+    color: white ;
+
+    text-decoration: inherit ;
+
+    padding: 10px ;
+
+    border-radius: 20px ; 
+
+}
+
+
+.nav_bar_link_block a:not( .active_nav_bar_link ) {
+
+    color: inherit ;
+
+    text-decoration: inherit ;
+
+    padding: 10px ;
+
+}
+
+
+
+
+
+@media ( max-width: 767px ) {
+
+    .nav_bar_link_block {
+
+        padding: 20px ;
+
+    }
+
+}
+
+
+

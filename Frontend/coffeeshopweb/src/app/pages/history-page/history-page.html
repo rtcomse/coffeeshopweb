@@ -1,0 +1,90 @@
+<div class="page_content_block">
+
+    <div class="content_left_block"></div>
+
+    <div class="content_middle_block">
+
+
+        <div class="history_page_block">
+            <div class="title_block">
+                History Page
+            </div>
+            <div class="content_block">
+                Select a coffee order from below to view details.
+            </div>
+        </div>
+
+
+        <div class="order_history_block">
+
+            <mat-accordion multi>
+
+                @for ( coffeeOrder of coffeeOrderList(); track coffeeOrder.id ) {
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Order Number #{{ coffeeOrder.orderNumber }}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <div class="order_content_block" >
+
+                            @for ( selectedIngredient of coffeeOrder.selectedIngredients; track selectedIngredient.id ) {
+
+                                <div class="order_content_selected_ingredient_block">
+                                    {{ selectedIngredient.name }}
+                                </div>
+
+                                @for ( selectedIngredientOption of coffeeOrder.selectedIngredientOptions; track selectedIngredientOption.id ) {
+
+                                    @for ( possibleIngredientOption of selectedIngredient.ingredientOptions; track possibleIngredientOption.id ) {
+
+                                        @if ( selectedIngredientOption.id === possibleIngredientOption.id ) {
+                                            
+                                            <div class="order_content_selected_ingredient_option_block">
+                                                {{ selectedIngredientOption.name }}
+                                            </div>
+
+                                        }
+
+                                    }
+
+
+
+                                }
+
+
+
+                            }
+
+                        </div>
+
+                        
+
+                    </mat-expansion-panel>
+
+
+
+                }
+                @empty {
+
+                    <div>
+                        No Coffee Orders.
+                    </div>
+
+                }
+
+            </mat-accordion>
+
+        </div>
+
+    </div>
+
+    <div class="content_right_block"></div>
+
+</div>
+
+
+
+

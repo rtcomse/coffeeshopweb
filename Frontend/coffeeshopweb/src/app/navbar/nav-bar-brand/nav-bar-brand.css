@@ -1,0 +1,19 @@
+.nav_bar_brand_block {
+
+    color: Chocolate ;
+
+    font-size: 60px ;
+    font-weight: bold ;
+
+    padding: 20px ;
+
+}
+
+.nav_bar_brand_block a {
+
+    color: inherit ;
+
+    text-decoration: inherit ;
+
+}
+

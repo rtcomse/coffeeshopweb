@@ -1,0 +1,81 @@
+<div class="page_content_block">
+
+    <div class="content_left_block"></div>
+
+    <div class="content_middle_block">
+
+
+        <div class="order_page_block">
+            <div class="title_block">
+                Order Page
+            </div>
+            <div class="content_block">
+                Select from the ingredients below to add to your coffee order.
+            </div>
+        </div>
+
+
+        <div class="ingredient_list_block">
+
+            <form id="form_ingredient_list" 
+                  action="{{ formSubmitUrl }}" 
+                  method="post">
+
+                @for ( ingredient of ingredientList(); track ingredient.id ) {
+
+                    <div class="ingredient_name_block">
+                        {{ ingredient.name }}
+                    </div>
+
+                    @for ( ingredientOption of ingredient.ingredientOptions; track ingredientOption.id ) {
+
+                        <div class="ingredient_option_name_block">
+                            <mat-checkbox name="selectedIngredientOptionList" 
+                                          value="{{ ingredient.id + '_DELIMITER_' + ingredientOption.id }}">
+
+                                {{ ingredientOption.name }}
+
+                            </mat-checkbox>
+                        </div>
+
+                    }
+                    @empty {
+
+                        <div>
+                            No Ingredient Options for this Ingredient.
+                        </div>
+
+                    }
+
+                    <br />
+
+                }
+                @empty {
+
+                    <div>
+                        No Ingredients.
+                    </div>
+
+                }
+
+            </form>
+
+            <div class="submit_button_block">
+
+                <button matButton="elevated" 
+                        form="form_ingredient_list" 
+                        type="submit">
+                    Submit
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="content_right_block"></div>
+
+</div>
+
+

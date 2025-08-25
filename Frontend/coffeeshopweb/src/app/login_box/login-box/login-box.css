@@ -1,0 +1,123 @@
+.login_box_content_block {
+
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: nowrap ;
+    justify-content: center ;
+    align-items: center ;
+
+    padding: 10px ;
+
+}
+
+.username_display_block {
+
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: nowrap ;
+    justify-content: flex-start ;
+    align-items: center ;
+
+}
+
+.username_display_block .title_block {
+
+    font-size: 20px ;
+    font-weight: bold ;
+
+    padding-left: 10px ;
+}
+
+.username_display_block .content_block {
+
+    font-size: 20px ;
+
+    padding-left: 10px ;
+
+}
+
+
+
+.signup_button_block {
+
+    padding-left: 10px ;
+
+}
+
+.login_button_block {
+
+    padding-left: 10px ;
+
+}
+
+.delete_button_block {
+
+    padding-left: 10px ;
+
+}
+
+.logout_button_block {
+
+    padding-left: 10px ;
+
+}
+
+
+
+.signup_button_block button {
+
+    width: 120px ;
+
+    font-size: 20px ;
+
+}
+
+.login_button_block button {
+
+    width: 100px ;
+
+    font-size: 20px ;
+
+}
+
+.delete_button_block button {
+
+    width: 100px ;
+
+    font-size: 20px ;
+
+}
+
+.logout_button_block button {
+
+    width: 100px ;
+
+    font-size: 20px ;
+
+}
+
+
+
+@media ( max-width: 767px ) {
+
+    .login_box_content_block {
+
+        flex-direction: column ;
+
+        align-items: stretch ;
+
+        text-align: center ;
+
+    }
+
+    .username_display_block {
+
+        justify-content: center ;
+
+    }
+
+}
+
+
+
+

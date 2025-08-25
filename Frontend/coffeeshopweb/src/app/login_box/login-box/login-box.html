@@ -1,0 +1,73 @@
+<div class="login_box_content_block">
+    <div class="username_display_block">
+        <p class="title_block">
+            Username:
+        </p>
+        <p class="content_block">
+            @if ( usernameList().length > 0 ) {
+
+                {{ usernameList()[ 0 ] }}
+            }
+            @else {
+
+                Not Logged In.
+
+            }
+        </p>
+    </div>
+
+
+    @if ( usernameList().length == 0 ) {
+
+        <div class="signup_button_block">
+            
+            <button matButton="outlined" (click)="openSignupModalDialog()">
+                Sign Up
+            </button>
+            
+        </div>
+
+    }
+
+    @if ( usernameList().length == 0 ) {
+
+        <div class="login_button_block">
+            <a href="{{ loginUrl }}">
+                <button matButton="filled">
+                    Login
+                </button>
+            </a>
+        </div>
+
+    }
+
+
+    @if ( usernameList().length > 0 ) {
+
+        <div class="delete_button_block">
+            
+            <button matButton="outlined" (click)="openDeleteModalDialog()">
+                Delete
+            </button>
+            
+        </div>
+        
+    }
+
+
+    @if ( usernameList().length > 0 ) {
+
+        <div class="logout_button_block">
+            <a href="{{ logoutUrl }}">
+                <button matButton="filled">
+                    Logout
+                </button>
+            </a>
+        </div>
+        
+    }
+
+    
+</div>
+
+
